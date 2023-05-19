@@ -6,7 +6,7 @@ using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Data;
 
-namespace NET.DataLayer.DbContext
+namespace NET.DataLayer.DbContexts
 {
     /// <summary>
     /// Lớp tạo connect đến CSDL
