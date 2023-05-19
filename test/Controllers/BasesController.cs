@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using NET.Business.Interfaces;
+using NET.Bussiness.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace API.Controllers
+namespace NET.API.Controllers
 {
     /// <summary>
     /// Controller dùng chung
@@ -12,7 +12,7 @@ namespace API.Controllers
     /// <typeparam name="T">Model</typeparam>
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class BasesController<T> : ControllerBase where T: class
+    public class BasesController<T> : ControllerBase where T : class
     {
         /// <summary>
         /// Biến baseBL
@@ -120,6 +120,6 @@ namespace API.Controllers
             return StatusCode((int)result.HTTPStatusCode, result.Data);
         }
 
- 
+
     }
 }

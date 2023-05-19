@@ -1,19 +1,18 @@
-﻿
-using NET.Business.Interfaces;
+﻿using NET.Bussiness.Interfaces;
 using NET.DataLayer.Interface;
 using NET.Model;
 using NET.Model.Dictionary;
 using NET.Model.Enum;
 using System;
 
-namespace NET.Business.Base
+namespace NET.Bussiness.Base
 {
     /// <summary>
     /// Lớp base xử lý nghiệp vụ
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// created by vthien 09.03.2021
-    public class BaseBL<T>: IBaseBL<T> where T: class
+    public class BaseBL<T> : IBaseBL<T> where T : class
     {
         /// <summary>
         /// Biến gọi lên tầng DL
@@ -39,7 +38,7 @@ namespace NET.Business.Base
             var result = _baseDL.GetAll();
 
             // danh sách rỗng => trả vè mã 204
-            if( result == null)
+            if (result == null)
             {
                 // khởi tạo dữ liệu trả về
                 var response = new BaseResponse()
@@ -171,7 +170,7 @@ namespace NET.Business.Base
             var entity = GetByID(id);
 
             // Nếu không tìm thấy => trả về kết quả của service lấy theo ID luôn
-            if(entity.HTTPStatusCode != HTTPStatusCode.Ok)
+            if (entity.HTTPStatusCode != HTTPStatusCode.Ok)
             {
                 return entity;
             }

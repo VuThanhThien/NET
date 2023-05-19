@@ -1,5 +1,5 @@
-﻿using NET.Business.Base;
-using NET.Business.Interfaces;
+﻿using NET.Bussiness.Base;
+using NET.Bussiness.Interfaces;
 using NET.DataLayer.Interface;
 using NET.Model;
 using NET.Model.Dictionary;
@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Transactions;
 
-namespace MISA.eShop.Business.Dictionary
+namespace NET.Bussiness.Dictionary
 {
     public class ProductBL : BaseBL<Product>, IProductBL
     {
@@ -48,15 +48,15 @@ namespace MISA.eShop.Business.Dictionary
             var param = new
             {
 
-                limit = limit,
-                offset = offset,
-                productSKU = productSKU,
-                productName = productName,
-                categoryCode = categoryCode,
-                unitCode = unitCode,
-                sellPrice = sellPrice,
-                isShow = isShow,
-                status = status
+                limit,
+                offset,
+                productSKU,
+                productName,
+                categoryCode,
+                unitCode,
+                sellPrice,
+                isShow,
+                status
             };
 
             var result = _productDL.GetPaging(param);
@@ -110,13 +110,13 @@ namespace MISA.eShop.Business.Dictionary
 
             var param = new
             {
-                productSKU = productSKU,
-                productName = productName,
-                categoryCode = categoryCode,
-                unitCode = unitCode,
-                sellPrice = sellPrice,
-                isShow = isShow,
-                status = status
+                productSKU,
+                productName,
+                categoryCode,
+                unitCode,
+                sellPrice,
+                isShow,
+                status
             };
 
             // khởi tạo dữ liệu trả về => trả về mã 200
@@ -138,7 +138,7 @@ namespace MISA.eShop.Business.Dictionary
         {
             var param = new
             {
-                productKey = productKey
+                productKey
             };
             //Nếu chuỗi nhập vào null
             if (productKey == null)

@@ -6,7 +6,7 @@ using NET.Model.Dictionary;
 using NET.Model.Enum;
 using System.Collections.Generic;
 
-namespace MISA.eShop.DataLayer.Dictionary
+namespace NET.DataLayer.Dictionary
 {
     public class ProductDL : BaseDL<Product>, IProductDL
     {
@@ -24,7 +24,7 @@ namespace MISA.eShop.DataLayer.Dictionary
             var procName = Procedure.PROC_GET_PRODUCT_PAGING;
 
             var parameters = new DynamicParameters(param);
-            
+
             var result = _dbContext.QueryStore(procName, parameters);
 
             return result;

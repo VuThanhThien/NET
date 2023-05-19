@@ -1,9 +1,9 @@
 ﻿using NET.Model;
 using System;
 
-namespace NET.Business.Interfaces
+namespace NET.Bussiness.Interfaces
 {
-    public interface IBaseBL<T> where T: class
+    public interface IBaseBL<T> where T : class
     {
         BaseResponse GetAll();
 

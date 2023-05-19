@@ -1,9 +1,8 @@
-﻿using NET.Business.Interfaces;
-using NET.Model;
+﻿using NET.Model;
 using NET.Model.Dictionary;
 using System.Collections.Generic;
 
-namespace NET.Business.Interfaces
+namespace NET.Bussiness.Interfaces
 {
     public interface IProductBL : IBaseBL<Product>
     {

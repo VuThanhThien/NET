@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NET.Business.Interfaces;
+using NET.Bussiness.Interfaces;
 using NET.Model.Dictionary;
 using System;
 using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace API.Controllers
+namespace NET.API.Controllers
 {
     /// <summary>
     /// API hàng hoá
